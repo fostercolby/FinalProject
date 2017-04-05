@@ -1,1 +1,17 @@
 C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\bin\Debug\FinalProject.exe.config
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\bin\Debug\FinalProject.exe
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\bin\Debug\FinalProject.pdb
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\bin\Debug\FinalProject.xml
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\obj\Debug\FinalProject.vbprojResolveAssemblyReference.cache
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\obj\Debug\FinalProject.Form1.resources
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\obj\Debug\FinalProject.Resources.resources
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\obj\Debug\FinalProject.vbproj.GenerateResource.Cache
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\obj\Debug\FinalProject.exe
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\obj\Debug\FinalProject.xml
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\obj\Debug\FinalProject.frmAddEmployee.resources
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\obj\Debug\FinalProject.frmRemoveEmployee.resources
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\obj\Debug\FinalProject.frmViewLevel.resources
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\obj\Debug\FinalProject.frmLevel.resources
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\bin\Debug\Employees.mdf
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\bin\Debug\Employees_log.ldf
