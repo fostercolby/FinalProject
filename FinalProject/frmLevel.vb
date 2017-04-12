@@ -1,19 +1,44 @@
 ﻿Public Class frmLevel
+    Dim XPAdapter As New EmployeeDataSetTableAdapters.ExperienceTableAdapter
+
+
     Private Sub frmLevel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim level As Integer = 1
-        Dim currentXP As Integer = 200
-        Dim minimumXP As Integer = 0
-        Dim maximumXP As Integer = 250
+        Dim level As Integer
+        Dim currentXP As Double
+        Dim minimumXP As Integer
+        Dim maximumXP As Integer
 
 
-        lblMessage.Text = "Congradulations you are level " & level
-        lblMin.Text = "This level starts at " & minimumXP & " experience"
-        lblMax.Text = "The next level starts at " & maximumXP & " experience"
-        barExperience.Minimum = minimumXP
-        barExperience.Maximum = maximumXP
-        barExperience.Value = currentXP
+        For Each entry In XPAdapter.GetData
+            If frmViewLevel.txtId.Text = entry.Id Then
+                currentXP = entry.Experience
+            End If
+
+        Next
 
 
+        For Each entry In Form1.ARAList
+            If frmViewLevel.txtId.Text = entry.Id Then
+                entry.Experience = currentXP
+                If currentXP < 800 Then
+                    level = 1
+                    minimumXP = 0
+                    maximumXP = 800
+                ElseIf currentXP > 800 And currentXP < 1600 Then
+                    level = 2
+                    minimumXP = 800
+                    maximumXP = 1600
+
+                End If
+
+            End If
+        Next
+            barExperience.Minimum = minimumXP
+            barExperience.Maximum = maximumXP
+            barExperience.Value = currentXP
+            lblMessage.Text = "Congradulations you are level " & level
+            lblMin.Text = "This level starts at " & minimumXP & " experience"
+            lblMax.Text = "The next level starts at " & maximumXP & " experience"
 
     End Sub
 

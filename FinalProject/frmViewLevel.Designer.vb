@@ -23,9 +23,10 @@ Partial Class frmViewLevel
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvEmployees = New System.Windows.Forms.DataGridView()
         Me.btnView = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.txtId = New System.Windows.Forms.TextBox()
+        CType(Me.dgvEmployees, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -37,14 +38,14 @@ Partial Class frmViewLevel
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Select Employee and click progress button to view progress!"
         '
-        'DataGridView1
+        'dgvEmployees
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 204)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(837, 218)
-        Me.DataGridView1.TabIndex = 1
+        Me.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEmployees.Location = New System.Drawing.Point(12, 204)
+        Me.dgvEmployees.Name = "dgvEmployees"
+        Me.dgvEmployees.RowTemplate.Height = 24
+        Me.dgvEmployees.Size = New System.Drawing.Size(837, 218)
+        Me.dgvEmployees.TabIndex = 1
         '
         'btnView
         '
@@ -55,23 +56,32 @@ Partial Class frmViewLevel
         Me.btnView.Text = "View Progress"
         Me.btnView.UseVisualStyleBackColor = True
         '
+        'txtId
+        '
+        Me.txtId.Location = New System.Drawing.Point(133, 64)
+        Me.txtId.Name = "txtId"
+        Me.txtId.Size = New System.Drawing.Size(100, 22)
+        Me.txtId.TabIndex = 3
+        '
         'frmViewLevel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(861, 434)
+        Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.btnView)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvEmployees)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmViewLevel"
         Me.Text = "View Level"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvEmployees, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvEmployees As DataGridView
     Friend WithEvents btnView As Button
+    Friend WithEvents txtId As TextBox
 End Class

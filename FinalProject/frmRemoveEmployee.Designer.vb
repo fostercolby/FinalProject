@@ -22,21 +22,21 @@ Partial Class frmRemoveEmployee
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvEmployees = New System.Windows.Forms.DataGridView()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnDelete = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvEmployees, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'dgvEmployees
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 165)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(823, 248)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEmployees.Location = New System.Drawing.Point(12, 165)
+        Me.dgvEmployees.Name = "dgvEmployees"
+        Me.dgvEmployees.RowTemplate.Height = 24
+        Me.dgvEmployees.Size = New System.Drawing.Size(823, 248)
+        Me.dgvEmployees.TabIndex = 0
         '
         'ComboBox1
         '
@@ -72,16 +72,16 @@ Partial Class frmRemoveEmployee
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvEmployees)
         Me.Name = "frmRemoveEmployee"
         Me.Text = "Remove Employee"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvEmployees, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvEmployees As DataGridView
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btnDelete As Button

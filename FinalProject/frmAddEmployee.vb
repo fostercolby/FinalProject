@@ -1,5 +1,7 @@
 ﻿Public Class frmAddEmployee
     Dim adapter As New EmployeeDataSetTableAdapters.EmployeesTableAdapter
+    Dim XPAdapter As New EmployeeDataSetTableAdapters.ExperienceTableAdapter
+
     Private Sub frmAddEmployee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'EmployeeDataSet.Employees' table. You can move, or remove it, as needed.
         Me.EmployeesTableAdapter.Fill(Me.EmployeeDataSet.Employees)
@@ -23,7 +25,14 @@
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        adapter.Insert(txtName.Text, cboType.SelectedItem.ToString, CInt(txtMentions.Text), txtMetric2.Text)
-        ' dgvEmployees.DataSource = 
+        adapter.Insert(txtName.Text, cboType.SelectedItem.ToString, CInt(txtMentions.Text), CDbl(txtMetric2.Text))
+        MessageBox.Show(adapter.MaxId)
+        If cboType.SelectedItem.ToString = "Advanced Repair Agent" Then
+            XPAdapter.Insert(adapter.MaxId, ((CInt(txtMentions.Text) * 50) + (CDbl(txtMetric2.Text) * 300)))
+        ElseIf cboType.SelectedItem.ToString = "Consultation Agent" Then
+            XPAdapter.Insert(adapter.MaxId, ((CInt(txtMentions.Text) * 50) + (CDbl(txtMetric2.Text) * 100)))
+        End If
+        dgvEmployees.DataSource = adapter.GetData
+
     End Sub
 End Class

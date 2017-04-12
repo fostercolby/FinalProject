@@ -1,4 +1,8 @@
 ﻿Public Class Form1
+    Dim adapter As New EmployeeDataSetTableAdapters.EmployeesTableAdapter
+    Public ARAList As New List(Of ARA)
+    Public CAList As New List(Of CA)
+
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         frmAddEmployee.ShowDialog()
 
@@ -20,6 +24,40 @@
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+        For Each entry In adapter.GetData
+            If entry.Type = "Advanced Repair Agent    " Then
+                Dim newARA As New ARA(entry.Id, entry.Name, entry.NPS, entry.Metric2)
+                ARAList.Add(newARA)
+
+            ElseIf entry.Type = "Consultation Agent       " Then
+                Dim newCA As New CA(entry.Id, entry.Name, entry.NPS, entry.Metric2)
+                CAList.Add(newCA)
+
+            End If
+
+
+        Next
+        dvgARAEmployee.DataSource = adapter.GetDataByARA
+        dvgCAEmployees.DataSource = adapter.GetDataByCA
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     End Sub
 End Class
