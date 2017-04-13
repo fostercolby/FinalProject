@@ -1277,21 +1277,15 @@ Namespace EmployeeDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Metric2", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Metric2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Employees] SET [Name] = @Name, [Type] = @Type, [NPS] = @NPS, [Metri"& _ 
-                "c2] = @Metric2 WHERE (([Id] = @Original_Id) AND ([Name] = @Original_Name) AND (["& _ 
-                "Type] = @Original_Type) AND ([NPS] = @Original_NPS) AND ([Metric2] = @Original_M"& _ 
-                "etric2));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, Name, Type, NPS, Metric2 FROM Employees WHERE (Id = @Id)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE Employees"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET          Name = @Name, Type = @Type, NPS = @NPS, Metric2 = "& _ 
+                "@Metric2"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (Id = @Id);      "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, Name, Type, NPS, Metric2 FROM Emp"& _ 
+                "loyees WHERE (Id = @Id)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Type", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Type", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NPS", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NPS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Metric2", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Metric2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Type", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Type", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_NPS", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NPS", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Metric2", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Metric2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Name", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Type", Global.System.Data.SqlDbType.NChar, 25, Global.System.Data.ParameterDirection.Input, 0, 0, "Type", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NPS", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "NPS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Metric2", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Metric2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1494,7 +1488,7 @@ Namespace EmployeeDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Name As String, ByVal Type As String, ByVal NPS As Integer, ByVal Metric2 As Double, ByVal Original_Id As Integer, ByVal Original_Name As String, ByVal Original_Type As String, ByVal Original_NPS As Integer, ByVal Original_Metric2 As Double, ByVal Id As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal Name As String, ByVal Type As String, ByVal NPS As Integer, ByVal Metric2 As Double, ByVal Id As Integer) As Integer
             If (Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Name")
             Else
@@ -1507,20 +1501,7 @@ Namespace EmployeeDataSetTableAdapters
             End If
             Me.Adapter.UpdateCommand.Parameters(2).Value = CType(NPS,Integer)
             Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Metric2,Double)
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_Id,Integer)
-            If (Original_Name Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Name")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_Name,String)
-            End If
-            If (Original_Type Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Type")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Type,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_NPS,Integer)
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_Metric2,Double)
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Id,Integer)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Id,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -1534,14 +1515,6 @@ Namespace EmployeeDataSetTableAdapters
                     Me.Adapter.UpdateCommand.Connection.Close
                 End If
             End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Name As String, ByVal Type As String, ByVal NPS As Integer, ByVal Metric2 As Double, ByVal Original_Id As Integer, ByVal Original_Name As String, ByVal Original_Type As String, ByVal Original_NPS As Integer, ByVal Original_Metric2 As Double) As Integer
-            Return Me.Update(Name, Type, NPS, Metric2, Original_Id, Original_Name, Original_Type, Original_NPS, Original_Metric2, Original_Id)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

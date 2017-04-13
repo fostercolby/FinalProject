@@ -4,9 +4,9 @@
 
     Private Sub frmLevel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim level As Integer
-        Dim currentXP As Double
+        Dim currentXP As Double = 0
         Dim minimumXP As Integer
-        Dim maximumXP As Integer
+        Dim maximumXP As Integer = 0
 
 
         For Each entry In XPAdapter.GetData
@@ -55,7 +55,10 @@
             barExperience.Value = currentXP
             lblMessage.Text = "Congradulations you are level " & level
             lblMin.Text = "This level starts at " & minimumXP & " experience"
-            lblMax.Text = "The next level starts at " & maximumXP & " experience"
+        lblMax.Text = "The next level starts at " & maximumXP & " experience"
+        Dim percent As Double = 0
+        percent = (currentXP / maximumXP)
+        lblPercentage.Text = "Congradulations you are currently " & Format(percent, "Percent") & " through this level!"
 
     End Sub
 

@@ -32,11 +32,10 @@
 
         For Each entry In adapter.GetData
             If entry.Type = "Advanced Repair Agent    " Then
-                Dim newARA As New ARA(entry.Id, entry.Name, entry.NPS, entry.Metric2)
+                Dim newARA As New ARA(entry.Id, entry.Name, entry.Type, entry.NPS, entry.Metric2)
                 ARAList.Add(newARA)
-
             ElseIf entry.Type = "Consultation Agent       " Then
-                Dim newCA As New CA(entry.Id, entry.Name, entry.NPS, entry.Metric2)
+                Dim newCA As New CA(entry.Id, entry.Name, entry.Type, entry.NPS, entry.Metric2)
                 CAList.Add(newCA)
 
             End If
@@ -58,6 +57,11 @@
 
 
 
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        frmUpdateEmployees.ShowDialog()
 
     End Sub
 End Class

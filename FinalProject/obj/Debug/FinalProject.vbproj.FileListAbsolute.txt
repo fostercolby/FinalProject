@@ -32,3 +32,4 @@ C:\Users\nck_c\Desktop\FinalProject\FinalProject\obj\Debug\FinalProject.frmViewL
 C:\Users\nck_c\Desktop\FinalProject\FinalProject\obj\Debug\FinalProject.Resources.resources
 C:\Users\nck_c\Desktop\FinalProject\FinalProject\obj\Debug\FinalProject.vbproj.GenerateResource.Cache
 C:\Users\nck_c\Desktop\FinalProject\FinalProject\obj\Debug\FinalProject.vbprojResolveAssemblyReference.cache
+C:\Users\nck_c\Google Drive\VBProjects\Final\FinalProject\FinalProject\obj\Debug\FinalProject.frmUpdateEmployees.resources

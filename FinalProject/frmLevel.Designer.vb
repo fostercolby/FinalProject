@@ -28,6 +28,7 @@ Partial Class frmLevel
         Me.lblMessage = New System.Windows.Forms.Label()
         Me.lblMin = New System.Windows.Forms.Label()
         Me.lblMax = New System.Windows.Forms.Label()
+        Me.lblPercentage = New System.Windows.Forms.Label()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -67,12 +68,22 @@ Partial Class frmLevel
         Me.lblMax.TabIndex = 3
         Me.lblMax.Text = "Label 2"
         '
+        'lblPercentage
+        '
+        Me.lblPercentage.AutoSize = True
+        Me.lblPercentage.Location = New System.Drawing.Point(434, 383)
+        Me.lblPercentage.Name = "lblPercentage"
+        Me.lblPercentage.Size = New System.Drawing.Size(51, 17)
+        Me.lblPercentage.TabIndex = 4
+        Me.lblPercentage.Text = "Label1"
+        '
         'frmLevel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(942, 474)
+        Me.Controls.Add(Me.lblPercentage)
         Me.Controls.Add(Me.lblMax)
         Me.Controls.Add(Me.lblMin)
         Me.Controls.Add(Me.lblMessage)
@@ -90,4 +101,5 @@ Partial Class frmLevel
     Friend WithEvents lblMessage As Label
     Friend WithEvents lblMax As Label
     Friend WithEvents lblMin As Label
+    Friend WithEvents lblPercentage As Label
 End Class

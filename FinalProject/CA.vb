@@ -4,17 +4,32 @@
     Dim mNPS As Integer
     Dim mID As Integer
     Dim mExperience As Double
+    Dim mType As String
 
     Dim adapter As New EmployeeDataSetTableAdapters.EmployeesTableAdapter
 
 
-    Public Sub New(ByVal pId As Integer, ByVal pname As String, ByVal pnps As Integer, ByVal pRevPerhour As Double, Optional ByVal pExperience As Double = 0)
+    Public Sub New(ByVal pId As Integer, ByVal pname As String, ByVal pType As String, ByVal pnps As Integer, ByVal pRevPerhour As Double, Optional ByVal pExperience As Double = 0)
         mID = pId
         mName = pname
         mRevPerHour = pRevPerhour
         mNPS = pnps
+        mExperience = pExperience
+        mType = pType
 
     End Sub
+    Public Property Type As String
+        Get
+            Return mType
+
+        End Get
+        Set(value As String)
+            value = mType
+
+        End Set
+
+    End Property
+
 
     Public Property Experience As Double
         Get

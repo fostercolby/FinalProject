@@ -145,6 +145,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="frmUpdateEmployees.Designer.vb">
+      <DependentUpon>frmUpdateEmployees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateEmployees.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRemoveEmployee.resx">
       <DependentUpon>frmRemoveEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateEmployees.resx">
+      <DependentUpon>frmUpdateEmployees.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewLevel.resx">
       <DependentUpon>frmViewLevel.vb</DependentUpon>
