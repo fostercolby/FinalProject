@@ -34,9 +34,9 @@ Partial Class frmViewLevel
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(216, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(386, 17)
+        Me.Label1.Size = New System.Drawing.Size(403, 17)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Select Employee and click progress button to view progress!"
+        Me.Label1.Text = "Enter employee number and click view button to view progress!"
         '
         'dgvEmployees
         '
