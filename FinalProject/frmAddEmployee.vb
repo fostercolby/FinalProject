@@ -30,7 +30,7 @@
         If cboType.SelectedItem.ToString = "Advanced Repair Agent" Then
             XPAdapter.Insert(adapter.MaxId, ((CInt(txtMentions.Text) * 50) + (CDbl(txtMetric2.Text) * 300)))
         ElseIf cboType.SelectedItem.ToString = "Consultation Agent" Then
-            XPAdapter.Insert(adapter.MaxId, ((CInt(txtMentions.Text) * 50) + (CDbl(txtMetric2.Text) * 100)))
+            XPAdapter.Insert(adapter.MaxId, ((CInt(txtMentions.Text) * 50) + (CDbl(txtMetric2.Text) * 15)))
         End If
         dgvEmployees.DataSource = adapter.GetData
 

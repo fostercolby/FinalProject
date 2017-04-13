@@ -33,8 +33,25 @@
 
             End If
         Next
-            barExperience.Minimum = minimumXP
-            barExperience.Maximum = maximumXP
+
+        For Each entry In Form1.CAList
+            If frmViewLevel.txtId.Text = entry.Id Then
+                entry.Experience = currentXP
+                If currentXP < 800 Then
+                    level = 1
+                    minimumXP = 0
+                    maximumXP = 800
+                ElseIf currentXP > 800 And currentXP < 1600 Then
+                    level = 2
+                    minimumXP = 800
+                    maximumXP = 1600
+
+                End If
+
+            End If
+        Next
+        barExperience.Minimum = minimumXP
+        barExperience.Maximum = maximumXP
             barExperience.Value = currentXP
             lblMessage.Text = "Congradulations you are level " & level
             lblMin.Text = "This level starts at " & minimumXP & " experience"
