@@ -8,6 +8,8 @@
     Dim mType As String
 
     Dim adapter As New EmployeeDataSetTableAdapters.EmployeesTableAdapter
+
+
     Public Sub New()
 
     End Sub
@@ -52,7 +54,8 @@
 
         End Get
         Set(value As Double)
-            value = mExperience
+            mExperience = value
+
 
         End Set
 
@@ -78,9 +81,11 @@
 
     End Function
 
-    Public Function Update(ByVal pId As Integer, ByVal pName As String, ByVal pType As String, ByVal PNPS As Integer, ByVal pTagsPerHour As Double) As Boolean
+    Public Function Update(ByVal pId As Integer, ByVal pName As String, ByVal pType As String, ByVal PNPS As Integer, ByVal pTagsPerHour As Double, Optional ByVal pExperience As Double = 0) As Boolean
         Try
             adapter.Update(pName, pType, PNPS, pTagsPerHour, pId)
+
+
             Return True
         Catch ex As Exception
             'LastError = ex.Message

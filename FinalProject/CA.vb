@@ -74,4 +74,19 @@
 
 
     End Function
+
+
+    Public Function Update(ByVal pId As Integer, ByVal pName As String, ByVal pType As String, ByVal PNPS As Integer, ByVal pRevPerhour As Double, Optional ByVal pExperience As Double = 0) As Boolean
+        Try
+            adapter.Update(pName, pType, PNPS, pRevPerhour, pId)
+
+
+            Return True
+        Catch ex As Exception
+            'LastError = ex.Message
+            Return False
+
+        End Try
+
+    End Function
 End Class

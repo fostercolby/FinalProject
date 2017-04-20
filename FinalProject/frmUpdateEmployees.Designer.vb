@@ -39,11 +39,20 @@ Partial Class frmUpdateEmployees
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.txtNPS = New System.Windows.Forms.TextBox()
         Me.txtMetric2 = New System.Windows.Forms.TextBox()
-        Me.EmployeesTableAdapter = New FinalProject.EmployeeDataSetTableAdapters.EmployeesTableAdapter()
         Me.txtType = New System.Windows.Forms.TextBox()
+        Me.EmployeesExperienceBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExperienceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmployeesTableAdapter = New FinalProject.EmployeeDataSetTableAdapters.EmployeesTableAdapter()
+        Me.ExperienceTableAdapter = New FinalProject.EmployeeDataSetTableAdapters.ExperienceTableAdapter()
+        Me.btnDone = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.dgvEmployees, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmployeesExperienceBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvEmployees
@@ -168,10 +177,6 @@ Partial Class frmUpdateEmployees
         Me.txtMetric2.TabIndex = 8
         Me.txtMetric2.Visible = False
         '
-        'EmployeesTableAdapter
-        '
-        Me.EmployeesTableAdapter.ClearBeforeFill = True
-        '
         'txtType
         '
         Me.txtType.Location = New System.Drawing.Point(710, 92)
@@ -180,11 +185,68 @@ Partial Class frmUpdateEmployees
         Me.txtType.TabIndex = 9
         Me.txtType.Visible = False
         '
+        'EmployeesExperienceBindingSource
+        '
+        Me.EmployeesExperienceBindingSource.DataMember = "Employees_Experience"
+        Me.EmployeesExperienceBindingSource.DataSource = Me.EmployeesBindingSource
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn1, Me.ExperienceDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.EmployeesExperienceBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 440)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(986, 150)
+        Me.DataGridView1.TabIndex = 10
+        '
+        'IdDataGridViewTextBoxColumn1
+        '
+        Me.IdDataGridViewTextBoxColumn1.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn1.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn1.Name = "IdDataGridViewTextBoxColumn1"
+        '
+        'ExperienceDataGridViewTextBoxColumn
+        '
+        Me.ExperienceDataGridViewTextBoxColumn.DataPropertyName = "Experience"
+        Me.ExperienceDataGridViewTextBoxColumn.HeaderText = "Experience"
+        Me.ExperienceDataGridViewTextBoxColumn.Name = "ExperienceDataGridViewTextBoxColumn"
+        '
+        'EmployeesTableAdapter
+        '
+        Me.EmployeesTableAdapter.ClearBeforeFill = True
+        '
+        'ExperienceTableAdapter
+        '
+        Me.ExperienceTableAdapter.ClearBeforeFill = True
+        '
+        'btnDone
+        '
+        Me.btnDone.Location = New System.Drawing.Point(404, 147)
+        Me.btnDone.Name = "btnDone"
+        Me.btnDone.Size = New System.Drawing.Size(75, 23)
+        Me.btnDone.TabIndex = 12
+        Me.btnDone.Text = "Done"
+        Me.btnDone.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.Location = New System.Drawing.Point(369, 86)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(160, 56)
+        Me.Label2.TabIndex = 13
+        Me.Label2.Text = "Once you are done updating all employees please click done!"
+        '
         'frmUpdateEmployees
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1010, 446)
+        Me.ClientSize = New System.Drawing.Size(1010, 560)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.btnDone)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.txtType)
         Me.Controls.Add(Me.txtMetric2)
         Me.Controls.Add(Me.txtNPS)
@@ -200,6 +262,8 @@ Partial Class frmUpdateEmployees
         CType(Me.dgvEmployees, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmployeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmployeeDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmployeesExperienceBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -223,4 +287,11 @@ Partial Class frmUpdateEmployees
     Friend WithEvents NPSDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Metric2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents txtType As TextBox
+    Friend WithEvents EmployeesExperienceBindingSource As BindingSource
+    Friend WithEvents ExperienceTableAdapter As EmployeeDataSetTableAdapters.ExperienceTableAdapter
+    Friend WithEvents ExperienceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnDone As Button
+    Friend WithEvents Label2 As Label
 End Class

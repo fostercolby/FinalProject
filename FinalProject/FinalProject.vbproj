@@ -129,6 +129,12 @@
     <Compile Include="frmLevel.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmWinner.Designer.vb">
+      <DependentUpon>frmWinner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWinner.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="helperMod.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewLevel.resx">
       <DependentUpon>frmViewLevel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWinner.resx">
+      <DependentUpon>frmWinner.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
