@@ -1,3 +1,0 @@
-﻿Module helperMod
-
-End Module

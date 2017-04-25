@@ -31,8 +31,19 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnRemove = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.AddRemoveUpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RemoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LevelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewLeveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dvgCAEmployees, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dvgARAEmployee, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnAdd
@@ -116,6 +127,73 @@ Partial Class Form1
         Me.btnRemove.Text = "Remove Employee"
         Me.btnRemove.UseVisualStyleBackColor = True
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.AddRemoveUpdateToolStripMenuItem, Me.LevelToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(754, 28)
+        Me.MenuStrip1.TabIndex = 9
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'AddRemoveUpdateToolStripMenuItem
+        '
+        Me.AddRemoveUpdateToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem, Me.RemoveToolStripMenuItem, Me.UpdateToolStripMenuItem})
+        Me.AddRemoveUpdateToolStripMenuItem.Name = "AddRemoveUpdateToolStripMenuItem"
+        Me.AddRemoveUpdateToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
+        Me.AddRemoveUpdateToolStripMenuItem.Text = "Add,Remove,Update"
+        '
+        'AddToolStripMenuItem
+        '
+        Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.AddToolStripMenuItem.Text = "Add"
+        '
+        'RemoveToolStripMenuItem
+        '
+        Me.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem"
+        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.RemoveToolStripMenuItem.Text = "Remove"
+        '
+        'UpdateToolStripMenuItem
+        '
+        Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
+        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.UpdateToolStripMenuItem.Text = "Update"
+        '
+        'LevelToolStripMenuItem
+        '
+        Me.LevelToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewLeveToolStripMenuItem, Me.ReportToolStripMenuItem})
+        Me.LevelToolStripMenuItem.Name = "LevelToolStripMenuItem"
+        Me.LevelToolStripMenuItem.Size = New System.Drawing.Size(55, 24)
+        Me.LevelToolStripMenuItem.Text = "Level"
+        '
+        'ViewLeveToolStripMenuItem
+        '
+        Me.ViewLeveToolStripMenuItem.Name = "ViewLeveToolStripMenuItem"
+        Me.ViewLeveToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ViewLeveToolStripMenuItem.Text = "View Level"
+        '
+        'ReportToolStripMenuItem
+        '
+        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ReportToolStripMenuItem.Text = "Report"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(44, 24)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ExitToolStripMenuItem.Text = "Exit"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -130,10 +208,14 @@ Partial Class Form1
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnRemove)
         Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.Text = "Employees"
         CType(Me.dvgCAEmployees, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dvgARAEmployee, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -148,4 +230,14 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents btnRemove As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents AddRemoveUpdateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RemoveToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UpdateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LevelToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ViewLeveToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
 End Class

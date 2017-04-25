@@ -1,0 +1,29 @@
+The current leader is :Tiffany Elm
+ 
+Leaders information: 
+Name: Tiffany Elm
+Type: Consultation Agent       
+NPS: 7
+Metric 2: 21
+
+All employees information: 
+Name: Nicholas Colby
+Type: Advanced Repair Agent    
+NPS: 2
+Metric 2: 0.6
+
+Name: Charles Ervin
+Type: Consultation Agent       
+NPS: 4
+Metric 2: 15
+
+Name: Chad Nemik
+Type: Consultation Agent       
+NPS: 1
+Metric 2: 12
+
+Name: Tiffany Elm
+Type: Consultation Agent       
+NPS: 7
+Metric 2: 21
+

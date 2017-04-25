@@ -22,11 +22,14 @@ Partial Class frmViewLevel
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvEmployees = New System.Windows.Forms.DataGridView()
         Me.btnView = New System.Windows.Forms.Button()
         Me.txtId = New System.Windows.Forms.TextBox()
+        Me.errProvider = New System.Windows.Forms.ErrorProvider(Me.components)
         CType(Me.dgvEmployees, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.errProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -63,6 +66,10 @@ Partial Class frmViewLevel
         Me.txtId.Size = New System.Drawing.Size(100, 22)
         Me.txtId.TabIndex = 3
         '
+        'errProvider
+        '
+        Me.errProvider.ContainerControl = Me
+        '
         'frmViewLevel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -75,6 +82,7 @@ Partial Class frmViewLevel
         Me.Name = "frmViewLevel"
         Me.Text = "View Level"
         CType(Me.dgvEmployees, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.errProvider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -84,4 +92,5 @@ Partial Class frmViewLevel
     Friend WithEvents dgvEmployees As DataGridView
     Friend WithEvents btnView As Button
     Friend WithEvents txtId As TextBox
+    Friend WithEvents errProvider As ErrorProvider
 End Class

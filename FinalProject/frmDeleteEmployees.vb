@@ -17,6 +17,13 @@ Public Class frmDeleteEmployees
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         errProvider.Clear()
 
+        If txtID.Text = "" Then
+            errProvider.SetError(txtID, "ID is blank")
+
+            Return
+
+        End If
+
         Dim result As Boolean = False
 
         For Each entry In adapter.GetData
@@ -38,6 +45,7 @@ Public Class frmDeleteEmployees
             Return
 
         End If
+
 
     End Sub
 End Class
