@@ -48,11 +48,17 @@ Partial Class frmUpdateEmployees
         Me.ExperienceTableAdapter = New FinalProject.EmployeeDataSetTableAdapters.ExperienceTableAdapter()
         Me.btnDone = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.errProvider = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.dgvEmployees, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeesExperienceBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.errProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvEmployees
@@ -114,6 +120,7 @@ Partial Class frmUpdateEmployees
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(100, 22)
         Me.txtId.TabIndex = 1
+        Me.txtId.Tag = "Id"
         '
         'btnSelect
         '
@@ -159,6 +166,7 @@ Partial Class frmUpdateEmployees
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(100, 22)
         Me.txtName.TabIndex = 6
+        Me.txtName.Tag = "Name"
         Me.txtName.Visible = False
         '
         'txtNPS
@@ -167,6 +175,7 @@ Partial Class frmUpdateEmployees
         Me.txtNPS.Name = "txtNPS"
         Me.txtNPS.Size = New System.Drawing.Size(100, 22)
         Me.txtNPS.TabIndex = 7
+        Me.txtNPS.Tag = "Name-Mentions"
         Me.txtNPS.Visible = False
         '
         'txtMetric2
@@ -175,6 +184,7 @@ Partial Class frmUpdateEmployees
         Me.txtMetric2.Name = "txtMetric2"
         Me.txtMetric2.Size = New System.Drawing.Size(100, 22)
         Me.txtMetric2.TabIndex = 8
+        Me.txtMetric2.Tag = "Metric 2"
         Me.txtMetric2.Visible = False
         '
         'txtType
@@ -183,6 +193,7 @@ Partial Class frmUpdateEmployees
         Me.txtType.Name = "txtType"
         Me.txtType.Size = New System.Drawing.Size(100, 22)
         Me.txtType.TabIndex = 9
+        Me.txtType.Tag = "Type"
         Me.txtType.Visible = False
         '
         'EmployeesExperienceBindingSource
@@ -239,11 +250,59 @@ Partial Class frmUpdateEmployees
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Once you are done updating all employees please click done!"
         '
+        'errProvider
+        '
+        Me.errProvider.ContainerControl = Me
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(630, 62)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(45, 17)
+        Me.Label3.TabIndex = 14
+        Me.Label3.Text = "Name"
+        Me.Label3.Visible = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(630, 92)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(40, 17)
+        Me.Label4.TabIndex = 15
+        Me.Label4.Text = "Type"
+        Me.Label4.Visible = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(574, 123)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(107, 17)
+        Me.Label5.TabIndex = 16
+        Me.Label5.Text = "Name-Mentions"
+        Me.Label5.Visible = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(630, 148)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(58, 17)
+        Me.Label6.TabIndex = 17
+        Me.Label6.Text = "Metric 2"
+        Me.Label6.Visible = False
+        '
         'frmUpdateEmployees
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1010, 560)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnDone)
         Me.Controls.Add(Me.DataGridView1)
@@ -264,6 +323,7 @@ Partial Class frmUpdateEmployees
         CType(Me.EmployeeDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmployeesExperienceBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.errProvider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -294,4 +354,9 @@ Partial Class frmUpdateEmployees
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnDone As Button
     Friend WithEvents Label2 As Label
+    Friend WithEvents errProvider As ErrorProvider
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
 End Class

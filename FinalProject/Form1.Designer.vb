@@ -23,7 +23,6 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnAdd = New System.Windows.Forms.Button()
-        Me.btnRemove = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.dvgCAEmployees = New System.Windows.Forms.DataGridView()
         Me.btnView = New System.Windows.Forms.Button()
@@ -31,6 +30,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnRemove = New System.Windows.Forms.Button()
         CType(Me.dvgCAEmployees, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dvgARAEmployee, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -43,15 +43,6 @@ Partial Class Form1
         Me.btnAdd.TabIndex = 0
         Me.btnAdd.Text = "Add Employee"
         Me.btnAdd.UseVisualStyleBackColor = True
-        '
-        'btnRemove
-        '
-        Me.btnRemove.Location = New System.Drawing.Point(159, 433)
-        Me.btnRemove.Name = "btnRemove"
-        Me.btnRemove.Size = New System.Drawing.Size(141, 33)
-        Me.btnRemove.TabIndex = 1
-        Me.btnRemove.Text = "Remove Employee"
-        Me.btnRemove.UseVisualStyleBackColor = True
         '
         'btnClose
         '
@@ -116,6 +107,15 @@ Partial Class Form1
         Me.Button1.Text = "Update Employee"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'btnRemove
+        '
+        Me.btnRemove.Location = New System.Drawing.Point(159, 433)
+        Me.btnRemove.Name = "btnRemove"
+        Me.btnRemove.Size = New System.Drawing.Size(141, 33)
+        Me.btnRemove.TabIndex = 1
+        Me.btnRemove.Text = "Remove Employee"
+        Me.btnRemove.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -140,7 +140,6 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents btnAdd As Button
-    Friend WithEvents btnRemove As Button
     Friend WithEvents btnClose As Button
     Friend WithEvents dvgCAEmployees As DataGridView
     Friend WithEvents btnView As Button
@@ -148,4 +147,5 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnRemove As Button
 End Class

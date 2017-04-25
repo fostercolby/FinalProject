@@ -9,7 +9,7 @@
     End Sub
 
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
-        frmRemoveEmployee.ShowDialog()
+        frmDeleteEmployees.ShowDialog()
 
     End Sub
 

@@ -111,10 +111,10 @@
     <Compile Include="frmAddEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRemoveEmployee.Designer.vb">
-      <DependentUpon>frmRemoveEmployee.vb</DependentUpon>
+    <Compile Include="frmDeleteEmployees.Designer.vb">
+      <DependentUpon>frmDeleteEmployees.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmRemoveEmployee.vb">
+    <Compile Include="frmDeleteEmployees.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmViewLevel.Designer.vb">
@@ -165,11 +165,11 @@
     <EmbeddedResource Include="frmAddEmployee.resx">
       <DependentUpon>frmAddEmployee.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDeleteEmployees.resx">
+      <DependentUpon>frmDeleteEmployees.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLevel.resx">
       <DependentUpon>frmLevel.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRemoveEmployee.resx">
-      <DependentUpon>frmRemoveEmployee.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateEmployees.resx">
       <DependentUpon>frmUpdateEmployees.vb</DependentUpon>
